@@ -37,6 +37,7 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' "show line numbers in N
 set noswapfile
 set wildmenu " visual autocomplete for command menu
 let NERDTreeShowLineNumbers=1 " show line numbers in NERDTree
+let g:airline_theme="powerlineish"
 
 " Mappings
 let mapleader = " "
