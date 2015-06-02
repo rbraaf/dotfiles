@@ -30,14 +30,18 @@ set timeoutlen=1000 " used for mapping delays
 set ttimeoutlen=0 " used for keycode delays
 set incsearch " searches characters as they are entered
 set hlsearch " highlight matches
-colorscheme pt_black
-" let g:molokai_original = 1
+let g:solarized_termcolors = 256
+" set background=dark
+colorscheme molokai
+let g:molokai_original = 1
 set cursorline
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' "show line numbers in Netrw
-set noswapfile
+set noswapfile " Disable swapfile from creating
 set wildmenu " visual autocomplete for command menu
 let NERDTreeShowLineNumbers=1 " show line numbers in NERDTree
-let g:airline_theme="powerlineish"
+" let g:airline_theme='powerlineish'
+" For Preview
+autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown
 
 " Mappings
 let mapleader = " "
@@ -51,6 +55,18 @@ nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>z <C-Z><CR>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
+" Switch panes
+nnoremap <Leader>ss <C-W>w
+" Open related file in split pane with <SPACE> rv
+nmap <leader>rv :RV<CR>
+" " Open related file in full pane with <SPACE> rr
+nmap <leader>rr :R<CR>
+
+
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
 
 " Pathogen
 execute pathogen#infect()
