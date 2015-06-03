@@ -61,7 +61,8 @@ nnoremap <Leader>ss <C-W>w
 nmap <leader>rv :RV<CR>
 " " Open related file in full pane with <SPACE> rr
 nmap <leader>rr :R<CR>
-
+" Clear trailing whitespace
+nnoremap <Leader>rt :%s/\s\+$//e<CR>
 
 " Source the vimrc file after saving it
 if has("autocmd")
