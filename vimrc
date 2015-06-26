@@ -30,10 +30,10 @@ set timeoutlen=1000 " used for mapping delays
 set ttimeoutlen=0 " used for keycode delays
 set incsearch " searches characters as they are entered
 set hlsearch " highlight matches
-let g:solarized_termcolors = 256
-" set background=dark
-colorscheme molokai
-let g:molokai_original = 1
+set background=dark
+colorscheme solarized
+let g:solarized_termtrans = 1
+" let g:molokai_original = 1
 set cursorline
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' "show line numbers in Netrw
 set noswapfile " Disable swapfile from creating
