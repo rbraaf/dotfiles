@@ -65,6 +65,12 @@ nmap <leader>rr :R<CR>
 nnoremap <Leader>rt :%s/\s\+$//e<CR>
 " Open VIMRC file with <SPACE> vm
 nmap <leader>vm :tabedit $MYVIMRC<CR>
+" Go to related controller with leader c
+nnoremap <leader>c :Econtroller<CR>
+" Copy/paste without going to visual mode
+nnoremap yp vyp<CR>
+" Go to related model with leader m
+nnoremap <leader>m :Emodel<CR>
 
 " Source the vimrc file after saving it
 if has("autocmd")
