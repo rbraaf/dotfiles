@@ -63,6 +63,8 @@ nmap <leader>rv :RV<CR>
 nmap <leader>rr :R<CR>
 " Clear trailing whitespace
 nnoremap <Leader>rt :%s/\s\+$//e<CR>
+" Open VIMRC file with <SPACE> vm
+nmap <leader>vm :tabedit $MYVIMRC<CR>
 
 " Source the vimrc file after saving it
 if has("autocmd")
