@@ -38,6 +38,7 @@ set cursorline
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' "show line numbers in Netrw
 set noswapfile " Disable swapfile from creating
 set wildmenu " visual autocomplete for command menu
+set ignorecase " ignore case sensitivity when searching
 let NERDTreeShowLineNumbers=1 " show line numbers in NERDTree
 " let g:airline_theme='powerlineish'
 " For Preview
@@ -71,6 +72,8 @@ nnoremap <leader>c :Econtroller<CR>
 nnoremap yp vyp<CR>
 " Go to related model with leader m
 nnoremap <leader>m :Emodel<CR>
+" jk is escape
+inoremap jk <esc>
 
 " Source the vimrc file after saving it
 if has("autocmd")
