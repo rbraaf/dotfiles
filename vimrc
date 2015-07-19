@@ -1,22 +1,41 @@
+" ========================================= "
+" vimrc mappings, plugins and configuration "
+" author: Ray Braaf                         "
+" github: https://github.com/rbraaf         "
+" ========================================= "
+
+
+" ============================ "
+" Vundle related configuration "
+" ============================ "
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
+call vundle#begin()
+
 Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-surround'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'honza/vim-snippets'
+Plugin 'tpope/vim-rails'
+Plugin 'garbas/vim-snipmate'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-commentary'
 
-" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" ============================ "
+" Vim related configuration    "
+" ============================ "
 
 syntax on " syntax highlighting
 set number " show line numbers
@@ -40,14 +59,15 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' "show line numbers in N
 set noswapfile " Disable swapfile from creating
 set wildmenu " visual autocomplete for command menu
 set ignorecase " ignore case sensitivity when searching
-let NERDTreeShowLineNumbers=1 " show line numbers in NERDTree
 " let g:airline_theme='powerlineish'
 " For Preview
 autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown
 
-" Mappings
+" ============================ "
+" Mappings                     "
+" ============================ "
+
 let mapleader = " "
-nmap <silent> <leader>d :NERDTreeToggle<CR>
 " Git Blame mapping
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 nnoremap <Leader>w :w<CR>
@@ -78,6 +98,10 @@ inoremap jk <esc>
 " Easy access to the start of the line
 nmap 0 ^
 
+" ============================ "
+" Misc. Configuration
+" ============================ "
+
 " Source the vimrc file after saving it
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
@@ -85,9 +109,6 @@ endif
 
 " Source (reload) your vimrc. Type space, s, o in sequence to trigger
 nmap <leader>so :source $MYVIMRC<cr>
-
-" Pathogen
-execute pathogen#infect()
 
 runtime macros/matchit.vim " Jump between method/class openings and closing tags with %
 
