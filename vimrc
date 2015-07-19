@@ -74,6 +74,8 @@ nnoremap yp vyp<CR>
 nnoremap <leader>m :Emodel<CR>
 " jk is escape
 inoremap jk <esc>
+" Easy access to the start of the line
+nmap 0 ^
 
 " Source the vimrc file after saving it
 if has("autocmd")
