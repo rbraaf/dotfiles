@@ -97,6 +97,8 @@ nnoremap <leader>m :Emodel<CR>
 inoremap jk <esc>
 " Easy access to the start of the line
 nmap 0 ^
+" Breakout into a new tab
+nnoremap <Leader>bt <C-w>T
 
 " ============================ "
 " Misc. Configuration
