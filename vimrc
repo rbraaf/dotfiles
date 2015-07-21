@@ -53,15 +53,11 @@ set hlsearch " highlight matches
 set background=dark
 colorscheme solarized
 let g:solarized_termtrans = 1
-" let g:molokai_original = 1
 set cursorline
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' "show line numbers in Netrw
 set noswapfile " Disable swapfile from creating
 set wildmenu " visual autocomplete for command menu
 set ignorecase " ignore case sensitivity when searching
-" let g:airline_theme='powerlineish'
-" For Preview
-autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown
 
 " ============================ "
 " Mappings                     "
