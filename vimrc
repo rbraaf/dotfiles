@@ -9,8 +9,8 @@
 " Vundle related configuration "
 " ============================ "
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
@@ -30,8 +30,8 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-commentary'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()
+filetype plugin indent on
 
 " ============================ "
 " Vim related configuration    "
