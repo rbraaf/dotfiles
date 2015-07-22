@@ -95,6 +95,8 @@ inoremap jk <esc>
 nmap 0 ^
 " Breakout into a new tab
 nnoremap <Leader>bt <C-w>T
+" Drop in Pry to debug. Leader bp
+nmap <leader>bp obinding.pry<esc>^
 
 " ============================ "
 " Misc. Configuration
