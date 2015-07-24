@@ -29,6 +29,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-commentary'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()
 filetype plugin indent on
@@ -37,34 +38,34 @@ filetype plugin indent on
 " Vim related configuration    "
 " ============================ "
 
-syntax on " syntax highlighting
-set number " show line numbers
-set laststatus=2
-set si " smart indent
-let g:netrw_liststyle=3 " sets the list style for Netrw
-set noshowmode " remove mode from status line when using vim airline
-set expandtab " tabs are spaces
-set tabstop=2 " number of visual spaces per TAB
-set shiftwidth=2 " number of space characters inserted for indentation
-set timeoutlen=1000 " used for mapping delays
-set ttimeoutlen=0 " used for keycode delays
-set incsearch " searches characters as they are entered
-set hlsearch " highlight matches
-set background=dark
-colorscheme solarized
+syntax on                                                " syntax highlighting
+set number                                               " show line numbers
+set laststatus=2                                         " always display the status line
+set si                                                   " smart indent
+let g:netrw_liststyle=3                                  " sets the list style for Netrw
+set noshowmode                                           " remove mode from status line when using vim airline
+set expandtab                                            " tabs are spaces
+set tabstop=2                                            " number of visual spaces per TAB
+set shiftwidth=2                                         " number of space characters inserted for indentation
+set timeoutlen=1000                                      " used for mapping delays
+set ttimeoutlen=0                                        " used for keycode delays
+set incsearch                                            " searches characters as they are entered
+set hlsearch                                             " highlight matches
+set background=dark                                      " set background
+colorscheme solarized                                    " set colorscheme
 let g:solarized_termtrans = 1
-set cursorline
-let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' "show line numbers in Netrw
-set noswapfile " Disable swapfile from creating
-set wildmenu " visual autocomplete for command menu
-set ignorecase " ignore case sensitivity when searching
+set cursorline                                           " adds cursorline
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' " show line numbers in Netrw
+set noswapfile                                           " Disable swapfile from creating
+set wildmenu                                             " visual autocomplete for command menu
+set ignorecase                                           " ignore case sensitivity when searching
 
 " ============================ "
 " Mappings                     "
 " ============================ "
-
+" set leader key
 let mapleader = " "
-" Git Blame mapping
+" git blame mapping
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 nnoremap <Leader>w :w<CR>
 " Open a new file
@@ -99,7 +100,7 @@ nnoremap <Leader>bt <C-w>T
 nmap <leader>bp obinding.pry<esc>^
 
 " ============================ "
-" Misc. Configuration
+" Misc. configuration          "
 " ============================ "
 
 " Source the vimrc file after saving it
