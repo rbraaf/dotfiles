@@ -39,6 +39,7 @@ filetype plugin indent on
 " ============================ "
 
 syntax on                                                " syntax highlighting
+set relativenumber                                       " relative line numbers
 set number                                               " show line numbers
 set laststatus=2                                         " always display the status line
 set si                                                   " smart indent
