@@ -30,6 +30,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 call vundle#end()
 filetype plugin indent on
@@ -39,7 +40,6 @@ filetype plugin indent on
 " ============================ "
 
 syntax on                                                " syntax highlighting
-set relativenumber                                       " relative line numbers
 set number                                               " show line numbers
 set laststatus=2                                         " always display the status line
 set si                                                   " smart indent
