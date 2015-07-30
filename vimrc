@@ -31,6 +31,7 @@ Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 filetype plugin indent on
