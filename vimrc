@@ -32,6 +32,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'mileszs/ack.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on
