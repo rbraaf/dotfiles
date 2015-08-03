@@ -76,7 +76,7 @@ nnoremap <Leader>o :CtrlP<CR>
 " Suspend Vim and Reopen
 nnoremap <Leader>z <C-Z><CR>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+nnoremap <silent> <C-x> :nohl<CR><C-l>
 " Switch panes
 nnoremap <Leader>ss <C-W>w
 " Open related file in split pane with <SPACE> rv
