@@ -33,6 +33,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'mileszs/ack.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'christoomey/vim-tmux-runner'
+Plugin 'tpope/vim-dispatch'
 
 call vundle#end()
 filetype plugin indent on
@@ -108,6 +110,17 @@ nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
 " Source (reload) your vimrc. Type space, s, o in sequence to trigger
 nmap <leader>so :source $MYVIMRC<cr>
+" Open a vim/tmux runner window
+nnoremap <leader>osr :VtrOpenRunner {'orientation': 'h', 'percentage': 50}<cr>
+" Vim tmux runner attach to pane
+nnoremap <leader>va :VtrAttachToPane<cr>
+" Send lines to runner - normal and visual mode
+nmap <C-f> :VtrSendLineToRunner<cr>
+vmap <C-f> <Esc>:VtrSendSelectedToRunner<cr>
+" Send command to runner
+nnoremap <leader>sc :VtrSendCommandToRunner<cr>
+" Focus VTR runner
+nnoremap <leader>fr :VtrFocusRunner<cr>
 
 " ============================ "
 " Misc. configuration          "
