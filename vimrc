@@ -102,6 +102,11 @@ nmap 0 ^
 nnoremap <Leader>bt <C-w>T
 " Drop in Pry to debug. Leader bp
 nmap <leader>bp obinding.pry<esc>^
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+" Source (reload) your vimrc. Type space, s, o in sequence to trigger
+nmap <leader>so :source $MYVIMRC<cr>
 
 " ============================ "
 " Misc. configuration          "
@@ -112,8 +117,8 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
-" Source (reload) your vimrc. Type space, s, o in sequence to trigger
-nmap <leader>so :source $MYVIMRC<cr>
+" Automatically resize vim windows with tmux splits.
+autocmd VimResized * :wincmd =
 
 runtime macros/matchit.vim " Jump between method/class openings and closing tags with %
 
