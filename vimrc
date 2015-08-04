@@ -63,6 +63,7 @@ set noswapfile                                           " Disable swapfile from
 set wildmenu                                             " visual autocomplete for command menu
 set ignorecase                                           " ignore case sensitivity when searching
 set list listchars=tab:»·,trail:·                        " Display extra whitespace
+set backspace=2                                          " make backspace work like most other apps
 
 " ============================ "
 " Mappings                     "
