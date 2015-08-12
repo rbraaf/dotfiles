@@ -121,6 +121,8 @@ vmap <C-f> <Esc>:VtrSendSelectedToRunner<cr>
 nnoremap <leader>sc :VtrSendCommandToRunner<cr>
 " Focus VTR runner
 nnoremap <leader>fr :VtrFocusRunner<cr>
+" Send file to runner
+nnoremap <leader>sf :VtrSendFile<cr>
 
 " ============================ "
 " Misc. configuration          "
