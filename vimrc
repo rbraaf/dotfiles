@@ -35,6 +35,8 @@ Plugin 'mileszs/ack.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'christoomey/vim-tmux-runner'
 Plugin 'tpope/vim-dispatch'
+Plugin 'ggreer/the_silver_searcher'
+Plugin 'rking/ag.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -63,10 +65,26 @@ set cursorline                                           " adds cursorline
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' " show line numbers in Netrw
 set noswapfile                                           " Disable swapfile from creating
 set wildmenu                                             " visual autocomplete for command menu
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip                 " used for speeding up ctrl-p
 set ignorecase                                           " ignore case sensitivity when searching
 set list listchars=tab:»·,trail:·                        " Display extra whitespace
 set backspace=2                                          " make backspace work like most other apps
+
+" ============================ "
+" THE SILVER SEARCHER          "
+" ============================ "
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+" Ag.vim will always search from project root
+let g:ag_working_path_mode="r"
 
 " ============================ "
 " Mappings                     "
@@ -128,11 +146,6 @@ nnoremap <leader>sf :VtrSendFile<cr>
 " ============================ "
 " Misc. configuration          "
 " ============================ "
-
-" Source the vimrc file after saving it
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
 
 " Automatically resize vim windows with tmux splits.
 autocmd VimResized * :wincmd =
