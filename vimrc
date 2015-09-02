@@ -68,6 +68,8 @@ set wildmenu                                             " visual autocomplete f
 set ignorecase                                           " ignore case sensitivity when searching
 set list listchars=tab:»·,trail:·                        " Display extra whitespace
 set backspace=2                                          " make backspace work like most other apps
+let g:airline_theme="murmur"                             " vim airline theme
+let g:airline_powerline_fonts = 1
 
 " ============================ "
 " THE SILVER SEARCHER          "
