@@ -37,6 +37,8 @@ Plugin 'christoomey/vim-tmux-runner'
 Plugin 'tpope/vim-dispatch'
 Plugin 'ggreer/the_silver_searcher'
 Plugin 'rking/ag.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-endwise'
 
 call vundle#end()
 filetype plugin indent on
