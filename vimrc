@@ -68,6 +68,7 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' " show line numbers in 
 set noswapfile                                           " Disable swapfile from creating
 set wildmenu                                             " visual autocomplete for command menu
 set ignorecase                                           " ignore case sensitivity when searching
+set smartcase
 set list listchars=tab:»·,trail:·                        " Display extra whitespace
 set backspace=2                                          " make backspace work like most other apps
 let g:airline_theme="murmur"                             " vim airline theme
