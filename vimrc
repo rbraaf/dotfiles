@@ -39,6 +39,7 @@ Plugin 'ggreer/the_silver_searcher'
 Plugin 'rking/ag.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 filetype plugin indent on
@@ -92,7 +93,7 @@ endif
 let g:ag_working_path_mode="r"
 
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$\|.idea',
       \ 'file': '\.exe$\|\.so$\|\.dat$'
       \ }
 
