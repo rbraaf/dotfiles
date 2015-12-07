@@ -92,7 +92,7 @@ endif
 let g:ag_working_path_mode="r"
 
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$\|.idea',
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$\|.idea\|tags',
       \ 'file': '\.exe$\|\.so$\|\.dat$'
       \ }
 

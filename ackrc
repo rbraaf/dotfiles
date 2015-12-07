@@ -13,6 +13,7 @@
 --ignore-dir=spec/cassettes
 --ignore-dir=features/cassettes
 --ignore-dir=.idea
+--ignore-dir=tags
 --smart-case
 --sort-files
 --color
