@@ -39,6 +39,7 @@ Plugin 'rking/ag.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/nerdtree'
+Plugin 'unblevable/quick-scope'
 
 call vundle#end()
 filetype plugin indent on
@@ -156,6 +157,9 @@ nnoremap <leader>sf :VtrSendFile<cr>
 " ============================ "
 " Misc. configuration          "
 " ============================ "
+
+" Trigger a highlight only when pressing f and F. (quick-scope)
+let g:qs_highlight_on_keys = ['f', 'F']
 
 " Automatically resize vim windows with tmux splits.
 autocmd VimResized * :wincmd =
