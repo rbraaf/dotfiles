@@ -6,43 +6,38 @@
 
 
 " ============================ "
-" Vundle related configuration "
+" Plug related configuration "
 " ============================ "
 
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+call plug#begin()
 
-call vundle#begin()
+Plug 'bling/vim-airline'
+Plug 'airblade/vim-gitgutter'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-rails'
+Plug 'garbas/vim-snipmate'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-commentary'
+Plug 'godlygeek/tabular'
+Plug 'mileszs/ack.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-runner'
+Plug 'tpope/vim-dispatch'
+Plug 'ggreer/the_silver_searcher'
+Plug 'rking/ag.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-endwise'
+Plug 'scrooloose/nerdtree'
+Plug 'unblevable/quick-scope'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'bling/vim-airline'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-surround'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'honza/vim-snippets'
-Plugin 'tpope/vim-rails'
-Plugin 'garbas/vim-snipmate'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-commentary'
-Plugin 'godlygeek/tabular'
-Plugin 'mileszs/ack.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'christoomey/vim-tmux-runner'
-Plugin 'tpope/vim-dispatch'
-Plugin 'ggreer/the_silver_searcher'
-Plugin 'rking/ag.vim'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-endwise'
-Plugin 'scrooloose/nerdtree'
-Plugin 'unblevable/quick-scope'
-
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 " ============================ "
 " Vim related configuration    "
@@ -106,7 +101,7 @@ let mapleader = " "
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 nnoremap <Leader>w :w<CR>
 " Open a new file
-nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>o :Files<CR>
 " Suspend Vim and Reopen
 nnoremap <Leader>z <C-Z><CR>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
