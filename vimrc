@@ -34,8 +34,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 Plug 'scrooloose/nerdtree'
 Plug 'unblevable/quick-scope'
-Plug 'junegunn/seoul256.vim'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
@@ -57,7 +56,7 @@ set ttimeoutlen=0                                        " used for keycode dela
 set incsearch                                            " searches characters as they are entered
 set hlsearch                                             " highlight matches
 set background=dark                                      " set background
-colorscheme seoul256                                     " set colorscheme
+colorscheme brogrammer                                   " set colorscheme
 let g:solarized_termtrans = 1
 set cursorline                                           " adds cursorline
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' " show line numbers in Netrw
