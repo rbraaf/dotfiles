@@ -34,9 +34,8 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 Plug 'scrooloose/nerdtree'
 Plug 'unblevable/quick-scope'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'junegunn/seoul256.vim'
+Plug 'kien/ctrlp.vim'
 
 call plug#end()
 
@@ -102,7 +101,7 @@ let mapleader = " "
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 nnoremap <Leader>w :w<CR>
 " Open a new file
-nnoremap <Leader>o :Files<CR>
+nnoremap <Leader>o :CtrlP<CR>
 " Suspend Vim and Reopen
 nnoremap <Leader>z <C-Z><CR>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
