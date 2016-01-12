@@ -36,6 +36,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'unblevable/quick-scope'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/seoul256.vim'
 
 call plug#end()
 
@@ -57,7 +58,7 @@ set ttimeoutlen=0                                        " used for keycode dela
 set incsearch                                            " searches characters as they are entered
 set hlsearch                                             " highlight matches
 set background=dark                                      " set background
-colorscheme brogrammer                                   " set colorscheme
+colorscheme seoul256                                     " set colorscheme
 let g:solarized_termtrans = 1
 set cursorline                                           " adds cursorline
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' " show line numbers in Netrw
@@ -157,13 +158,13 @@ nnoremap <leader>sf :VtrSendFile<cr>
 let g:qs_highlight_on_keys = ['f', 'F']
 
 " Make cursor vertical line in insert mode
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
+" if exists('$TMUX')
+"   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+"   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+" else
+"   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" endif
 
 " Automatically resize vim windows with tmux splits.
 autocmd VimResized * :wincmd =
