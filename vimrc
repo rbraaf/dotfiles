@@ -56,7 +56,7 @@ set ttimeoutlen=0                                        " used for keycode dela
 set incsearch                                            " searches characters as they are entered
 set hlsearch                                             " highlight matches
 set background=dark                                      " set background
-colorscheme brogrammer                                   " set colorscheme
+colorscheme apprentice                                   " set colorscheme
 let g:solarized_termtrans = 1
 set cursorline                                           " adds cursorline
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' " show line numbers in Netrw
