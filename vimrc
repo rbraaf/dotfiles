@@ -12,6 +12,7 @@
 call plug#begin()
 
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-surround'
@@ -32,7 +33,7 @@ Plug 'ggreer/the_silver_searcher'
 Plug 'rking/ag.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTree' }
 Plug 'unblevable/quick-scope'
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -44,6 +45,7 @@ call plug#end()
 
 syntax on                                                " syntax highlighting
 set number                                               " show line numbers
+set relativenumber
 set laststatus=2                                         " always display the status line
 set si                                                   " smart indent
 let g:netrw_liststyle=3                                  " sets the list style for Netrw
@@ -68,7 +70,7 @@ set list listchars=tab:»·,trail:·                        " Display extra whit
 set backspace=2                                          " make backspace work like most other apps
 let g:airline_theme="murmur"                             " vim airline theme
 let g:airline#extensions#tabline#enabled = 1             " vim airline tab line
-
+let g:airline#extensions#tabline#buffer_nr_show = 1      " show buffer numbers in tabline
 let g:airline_powerline_fonts = 1
 
 " ============================ "
