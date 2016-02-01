@@ -67,6 +67,8 @@ set smartcase
 set list listchars=tab:»·,trail:·                        " Display extra whitespace
 set backspace=2                                          " make backspace work like most other apps
 let g:airline_theme="murmur"                             " vim airline theme
+let g:airline#extensions#tabline#enabled = 1             " vim airline tab line
+
 let g:airline_powerline_fonts = 1
 
 " ============================ "
