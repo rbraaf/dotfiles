@@ -36,6 +36,7 @@ Plug 'tpope/vim-endwise'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTree' }
 Plug 'unblevable/quick-scope'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 call plug#end()
 
@@ -72,6 +73,7 @@ let g:airline_theme="murmur"                             " vim airline theme
 let g:airline#extensions#tabline#enabled = 1             " vim airline tab line
 let g:airline#extensions#tabline#buffer_nr_show = 1      " show buffer numbers in tabline
 let g:airline_powerline_fonts = 1
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 " ============================ "
 " THE SILVER SEARCHER          "
