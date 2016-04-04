@@ -37,6 +37,9 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTree' }
 Plug 'unblevable/quick-scope'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'fatih/vim-go'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 call plug#end()
 
@@ -160,6 +163,9 @@ nnoremap <leader>sf :VtrSendFile<cr>
 
 " Trigger a highlight only when pressing f and F. (quick-scope)
 let g:qs_highlight_on_keys = ['f', 'F']
+
+" JSX Syntax on JS files
+let g:jsx_ext_required = 0
 
 " Make cursor vertical line in insert mode
 if exists('$TMUX')
