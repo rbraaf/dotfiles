@@ -40,6 +40,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'fatih/vim-go'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'scwood/vim-hybrid'
 
 call plug#end()
 
@@ -62,7 +63,8 @@ set ttimeoutlen=0                                        " used for keycode dela
 set incsearch                                            " searches characters as they are entered
 set hlsearch                                             " highlight matches
 set background=dark                                      " set background
-colorscheme apprentice                                   " set colorscheme
+colorscheme hybrid                                       " set colorscheme
+set colorcolumn=80                                       " mark 80 characters
 let g:solarized_termtrans = 1
 set cursorline                                           " adds cursorline
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' " show line numbers in Netrw
