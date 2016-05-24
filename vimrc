@@ -40,7 +40,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'fatih/vim-go'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'scwood/vim-hybrid'
+Plug 'jacoborus/tender'
 
 call plug#end()
 
@@ -63,7 +63,7 @@ set ttimeoutlen=0                                        " used for keycode dela
 set incsearch                                            " searches characters as they are entered
 set hlsearch                                             " highlight matches
 set background=dark                                      " set background
-colorscheme hybrid                                       " set colorscheme
+colorscheme tender                                       " set colorscheme
 set colorcolumn=80                                       " mark 80 characters
 let g:solarized_termtrans = 1
 set cursorline                                           " adds cursorline
@@ -79,6 +79,7 @@ let g:airline#extensions#tabline#enabled = 1             " vim airline tab line
 let g:airline#extensions#tabline#buffer_nr_show = 1      " show buffer numbers in tabline
 let g:airline_powerline_fonts = 1
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+set mouse-=a                                             " Disable mouse, who uses a mouse in vim?
 
 " ============================ "
 " THE SILVER SEARCHER          "
