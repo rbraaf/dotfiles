@@ -41,6 +41,7 @@ Plug 'fatih/vim-go'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'jacoborus/tender'
+Plug 'christoomey/vim-conflicted'
 
 call plug#end()
 
