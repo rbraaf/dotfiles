@@ -183,6 +183,9 @@ endif
 " Automatically resize vim windows with tmux splits.
 autocmd VimResized * :wincmd =
 
+" Use vertical splits for diff
+set diffopt+=vertical
+
 runtime macros/matchit.vim " Jump between method/class openings and closing tags with %
 
 source ~/.vim/rspec " RSpec shortcut commands
